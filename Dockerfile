@@ -13,5 +13,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
     if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
 
 # 指定要執行的命令
-# CMD ["uvicorn", "main:app", "--reload"]
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
